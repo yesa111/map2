@@ -1,0 +1,97 @@
+#marker-detail {
+  position: absolute;
+  left: 280px;
+  right: 0;
+  background: #FFF;
+  z-index: 200;
+  padding: 10px;
+  display: none;
+  transition: left .2s;
+}
+
+#marker-detail.preview {
+  display: block;
+  bottom: 0;
+}
+
+#marker-detail.preview .messages{
+  display: none;
+}
+
+#marker-detail.detail {
+  display: block;
+  top: 40%;
+}
+
+#marker-detail:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  background: rgba(255,255,255,.5);
+}
+/*
+#marker-detail[data-mode="hide"] {
+  display: none;
+}
+*/
+
+#marker-detail .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#marker-detail article.message {
+  padding-top: 10px;
+  margin: 10px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+#marker-detail h3,
+#marker-detail p {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#marker-detail header h3{
+  margin: 0 40px 0 0;
+}
+
+#marker-detail select.messageTemplates{
+  margin: 3px;
+  width: auto;
+}
+
+#marker-detail .messages {
+  margin: 10px 0 0;
+}
+#marker-detail textarea {
+  display: block;
+  width: 100%;
+  height: 5em;
+}
+
+#marker-detail h3 input {
+  font-size: inherit;
+  line-height: 1em;
+  height: 1.6em;
+  width: auto;
+}
+
+#markerList[data-mode="show"] ~ #marker-detail {
+  left: 280px;
+}
+
+@media only screen and (max-width: 480px){
+  #marker-detail {
+    left: 0px;
+    width: 100%;
+  }
+}
